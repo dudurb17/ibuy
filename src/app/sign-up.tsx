@@ -1,14 +1,16 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-import { Link, router } from "expo-router";
+import { Link, router, useLocalSearchParams } from "expo-router";
 
 export default function SignUp() {
+  const {name} = useLocalSearchParams()
   function back() {
     router.back()
   }
 
   return (
     <View style={styles.container}>
+       <Text >{name}</Text>
       {/* <Link href="/">
         <Text style={styles.back}>Voltar</Text>
       </Link> */}

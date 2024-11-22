@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 
 export default function Index() {
   function signUp() {
-    router.navigate('/sign-up')
+    router.navigate("/sign-up");
   }
   return (
     <View style={styles.container}>
@@ -16,6 +16,19 @@ export default function Index() {
       <TouchableOpacity style={styles.button} onPress={signUp}>
         <Text style={styles.label}>Criar conta</Text>
       </TouchableOpacity>
+      {/* <Link
+        href={{
+          pathname: "/sign-up",
+          params: {
+            name: "Eduardo",
+            id: 1,
+          },
+        }}
+      >
+        Enviar parâmetro
+      </Link> */}
+
+      <Link href={{ pathname: "/home", params: { id: 7 } }}>Ir para home</Link>
     </View>
   );
 }
