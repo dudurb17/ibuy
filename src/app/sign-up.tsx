@@ -1,11 +1,15 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Link href="/" style={styles.back} >Voltar</Link>
+      <Link href="/" >
+      
+          <Text style={styles.back}>Voltar</Text>
+       
+      </Link>
     </View>
   );
 }
